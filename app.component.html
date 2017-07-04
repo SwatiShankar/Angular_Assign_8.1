@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="form-group">
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th># </th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of teamPlayer; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.lastName}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+<div ng-controller="TestController as testCtrl">
+  <form ng-submit="addText(form)">
+    <input type="text" ng-model="form.text1" value="Lets go">
+    <input type="text" ng-model="form.text2" value="Lets go again">
+    <input type="submit" value="add">
+  </form>
+</div>
+</html>
